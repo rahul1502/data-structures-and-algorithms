@@ -3,6 +3,8 @@ import DataStructures.Arrays.ArraysRunner;
 import DataStructures.Arrays.DynamicArray;
 import DataStructures.Arrays.StaticArray;
 import DataStructures.LinkedLists.LinkedListsRunner;
+import DataStructures.Queue.QueueRunner;
+import DataStructures.Stack.StackRunner;
 import DataStructures.Trees.TreesRunner;
 
 import java.util.Arrays;
@@ -17,8 +19,11 @@ public class Master {
         // DataStructures.LinkedLists
         (new LinkedListsRunner()).run();
 
+        // DataStructures.Stack
+        (new StackRunner()).run();
 
-
+        // DataStructures.Queue
+        (new QueueRunner()).run();
 
         // DataStructures.Trees
         (new TreesRunner()).run();
