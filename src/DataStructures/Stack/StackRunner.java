@@ -6,7 +6,7 @@ public class StackRunner {
 
     public void run() {
 
-        System.out.println("DataStructures.Stack");
+        System.out.println("DataStructures.Stack: ");
 
         // initialize stack
         Stack stack = new Stack(3);
@@ -22,7 +22,6 @@ public class StackRunner {
         System.out.println("    pop(): " + stack.pop() + " | " + Arrays.toString(stack.stack));
         System.out.println("    peek(): " + stack.peek());
 
-        System.out.println("--------------------------------------");
     }
 
 }

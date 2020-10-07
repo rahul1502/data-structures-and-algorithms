@@ -6,7 +6,7 @@ public class QueueRunner {
 
     public void run() {
 
-        System.out.println("DataStructures.Queue");
+        System.out.println("DataStructures.Queue: ");
 
         // initialize Queue
         Queue queue = new Queue(3);
@@ -22,6 +22,5 @@ public class QueueRunner {
         System.out.println("    dequque(): " + queue.dequque() + " | " + Arrays.toString(queue.queue));
         System.out.println("    peek(): " + queue.peek());
 
-        System.out.println("--------------------------------------");
     }
 }

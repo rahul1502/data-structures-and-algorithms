@@ -4,7 +4,7 @@ public class LinkedListsRunner {
 
     public void run() {
 
-        System.out.println("DataStructures.LinkedLists");
+        System.out.println("DataStructures.LinkedLists: ");
 
         // Singly Linked List
         SinglyNode a = new SinglyNode(1), b = new SinglyNode(2);
@@ -30,7 +30,6 @@ public class LinkedListsRunner {
         // Circular Linked List
         d.next = a;
 
-        System.out.println("--------------------------------------");
     }
 
     // Singly Linked List Operations
