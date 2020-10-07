@@ -1,4 +1,5 @@
 import Algorithms.BinarySearch;
+import Algorithms.BinaryTreeTraversal.BinaryTreeTraversalRunner;
 import DataStructures.Arrays.ArraysRunner;
 import DataStructures.BinarySearchTree.BinarySearchTreeRunner;
 import DataStructures.BinaryTree.BinaryTreeRunner;
@@ -13,6 +14,8 @@ public class Master {
 
     public static void main(String[] args) {
 
+        System.out.println("--------------------------------------");
+        System.out.println("    Data Structures    ");
         System.out.println("--------------------------------------");
 
         // DataStructures.Arrays
@@ -42,6 +45,16 @@ public class Master {
 
         // DataStructures.BinarySearchTree
         (new BinarySearchTreeRunner()).run();
+
+        System.out.println("--------------------------------------");
+        System.out.println("    Algorithms    ");
+        System.out.println("--------------------------------------");
+
+        // Algorithms.BinaryTreeTraversal
+        (new BinaryTreeTraversalRunner()).run();
+
+        System.out.println("--------------------------------------");
+
 //
 //        // Problems.ExpressionParsing
 //        (new ExpressionParsingRunner()).run();
