@@ -53,8 +53,8 @@ DataStructures.BinarySearchTree:
     Delete node: 20
 --------------------------------------
 DataStructures.Graph: 
-Representation
-Vertices: [ A, B, C, D, E ,F ]
+    Representation
+    Vertices: [ A, B, C, D, E ,F ]
     Edge List: 
         A -> B
         A -> D
@@ -148,6 +148,46 @@ Algorithms.GraphTraversal:
         Traversed: A J I B K M C D E H G F L  Stack: A 
         Traversed: A J I B K M C D E H G F L  Stack: 
 --------------------------------------
+Algorithms.ShortestPathAlgorithms: 
+    Dijkstra's Shortest Path Algorithm: 
+        Graph [ A, B, C, D, E ,F ]: 
+            A : B[5] C[1] 
+            B : E[20] C[2] D[3] 
+            C : B[3] E[12] 
+            D : F[6] E[2] C[3] 
+            E : F[1] 
+            F : 
+
+        Shortest distances from A: 
+            F: 10
+            B: 4
+            A: 0
+            E: 9
+            C: 1
+            D: 7
+
+    Bellman-Ford Algorithm: 
+        Graph [ A, B, C, D, E ,F, G ]: 
+            A : B[6] D[5] C[5] 
+            B : E[-1] 
+            C : B[-2] E[1] 
+            D : C[-2] F[-1] 
+            E : G[3] 
+            F : G[3] 
+            G : 
+
+        Shortest distances from A: 
+            G: 3
+            B: 1
+            D: 5
+            E: 0
+            A: 0
+            C: 3
+            F: 4
+
+--------------------------------------
+
+
 
 
 ```
