@@ -1,11 +1,12 @@
 package Algorithms.BinaryTreeTraversal;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BinaryTreeTraversalRunner {
 
     public void run() {
+
+        System.out.println("Algorithms.BinaryTreeTraversal: ");
 
         // create binary tree
         BinaryNode a = new BinaryNode("A"), b = new BinaryNode("B"), c = new BinaryNode("C"),
@@ -17,25 +18,25 @@ public class BinaryTreeTraversalRunner {
         d.left = b; d.right = e; b.left = a; b.right = c;
         k.left = h; k.right = l; h.left = g; h.right = j; j.left = i;
 
-        System.out.println("Binary Tree created...");
+        System.out.println("    Binary Tree created...");
 
-        System.out.println("Breadth First Strategy: ");
+        System.out.println("    Breadth First Strategy: ");
 
         BreadthFirstStrategy breadthFirstStrategy = new BreadthFirstStrategy(15);
-        System.out.println("    Level Order traversal " + Arrays.toString(breadthFirstStrategy.levelOrderTraversal(f)));
+        System.out.println("        Level Order traversal " + Arrays.toString(breadthFirstStrategy.levelOrderTraversal(f)));
 
-        System.out.println("Depth First Strategy: ");
+        System.out.println("    Depth First Strategy: ");
 
         DepthFirstStrategy depthFirstStrategy = new DepthFirstStrategy();
-        System.out.print("    Pre-order traversal: [");
+        System.out.print("        Pre-order traversal: [");
         depthFirstStrategy.preorderTraversal(f);
         System.out.println("]");
 
-        System.out.print("    In-order traversal: [");
+        System.out.print("        In-order traversal: [");
         depthFirstStrategy.inorderTraversal(f);
         System.out.println("]");
 
-        System.out.print("    Post-order traversal: [");
+        System.out.print("        Post-order traversal: [");
         depthFirstStrategy.postOrderTraversal(f);
         System.out.println("]");
 

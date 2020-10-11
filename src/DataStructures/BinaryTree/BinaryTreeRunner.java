@@ -19,10 +19,10 @@ public class BinaryTreeRunner {
         b25.right = b36; b21.right = b47;
 
         // findSum
-        System.out.println("Sum of all nodes under b1 (including b1): " + findSum(b1));
+        System.out.println("    Sum of all nodes under b1 (including b1): " + findSum(b1));
 
         // maximum depth
-        System.out.println("Maximum depth of the binary tree: " + maxDepth(b1));
+        System.out.println("    Maximum depth of the binary tree: " + maxDepth(b1));
 
     }
 
