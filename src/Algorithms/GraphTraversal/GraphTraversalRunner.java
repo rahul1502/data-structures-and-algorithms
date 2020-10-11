@@ -10,7 +10,7 @@ public class GraphTraversalRunner {
 
         // create graph
         System.out.println("    Vertices : [ A, B, C, D, E ,F, G, H, I, J, K, L, M ]");
-        AdjacencyList graph = createGraph();
+        Graph graph = createGraph();
         System.out.println("    Graph: ");
         for(Vertex i: graph.vertexList) {
             System.out.print("        " + i.getName() + " : ");
@@ -35,14 +35,14 @@ public class GraphTraversalRunner {
     }
 
 
-    private AdjacencyList createGraph() {
+    private Graph createGraph() {
 
         Vertex A = new Vertex("A"), B = new Vertex("B"), C =  new Vertex("C"), D =  new Vertex("D"),
                 E = new Vertex("E"), F = new Vertex("F"), G = new Vertex("G"), H = new Vertex("H"),
                 I = new Vertex("I"), J = new Vertex("J"), K = new Vertex("K"), L = new Vertex("L"),
                 M = new Vertex("M");
 
-        AdjacencyList graph = new AdjacencyList(new ArrayList<Vertex>() {{
+        Graph graph = new Graph(new ArrayList<Vertex>() {{
             add(A); add(B); add(C); add(D); add(E); add(F); add(G);
             add(H); add(I); add(J); add(K); add(L); add(M);
         }});

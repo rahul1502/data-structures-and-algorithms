@@ -12,9 +12,9 @@ public class GraphRunner {
 
         System.out.println("DataStructures.Graph: ");
 
-        System.out.println("Representation");
+        System.out.println("    Representation");
 
-        System.out.println("Vertices: [ A, B, C, D, E ,F ]");
+        System.out.println("    Vertices: [ A, B, C, D, E ,F ]");
 
         // Edge List
         EdgeList graph1 = new EdgeList(new ArrayList<String>() {{

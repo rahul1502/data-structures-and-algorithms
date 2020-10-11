@@ -1,6 +1,7 @@
 import Algorithms.BinarySearch;
 import Algorithms.BinaryTreeTraversal.BinaryTreeTraversalRunner;
 import Algorithms.GraphTraversal.GraphTraversalRunner;
+import Algorithms.ShortestPathAlgorithms.ShortestPathAlgorithmsRunner;
 import DataStructures.Arrays.ArraysRunner;
 import DataStructures.BinarySearchTree.BinarySearchTreeRunner;
 import DataStructures.BinaryTree.BinaryTreeRunner;
@@ -64,6 +65,10 @@ public class Master {
 
         // Algorithms.GraphTraversalRunner
         (new GraphTraversalRunner()).run();
+        System.out.println("--------------------------------------");
+
+        // Algorithms.ShortestPathAlgorithmsRunner
+        (new ShortestPathAlgorithmsRunner()).run();
         System.out.println("--------------------------------------");
 
 //

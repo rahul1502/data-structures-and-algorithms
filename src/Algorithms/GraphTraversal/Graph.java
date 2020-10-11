@@ -2,11 +2,11 @@ package Algorithms.GraphTraversal;
 
 import java.util.List;
 
-public class AdjacencyList {
+public class Graph {
 
     public List<Vertex> vertexList;
 
-    public AdjacencyList(List<Vertex> vertexList) {
+    public Graph(List<Vertex> vertexList) {
         this.vertexList = vertexList;
     }
 
