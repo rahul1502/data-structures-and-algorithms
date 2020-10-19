@@ -85,15 +85,9 @@ public class ShortestPathAlgorithmsRunner {
         }});
 
         // add edges
-        weightedGraph.addEdge(A, B, 6);
-        weightedGraph.addEdge(A, C, 5);
-        weightedGraph.addEdge(A, D, 5);
-        weightedGraph.addEdge(B, E, -1);
-        weightedGraph.addEdge(C, B, -2);
-        weightedGraph.addEdge(C, E, 1);
-        weightedGraph.addEdge(D, C, -2);
-        weightedGraph.addEdge(D, F, -1);
-        weightedGraph.addEdge(E, G, 3);
+        weightedGraph.addEdge(A, B, 6); weightedGraph.addEdge(A, C, 5); weightedGraph.addEdge(A, D, 5);
+        weightedGraph.addEdge(B, E, -1); weightedGraph.addEdge(C, B, -2); weightedGraph.addEdge(C, E, 1);
+        weightedGraph.addEdge(D, C, -2); weightedGraph.addEdge(D, F, -1);weightedGraph.addEdge(E, G, 3);
         weightedGraph.addEdge(F, G, 3);
 
         return weightedGraph;

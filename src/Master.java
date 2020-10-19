@@ -1,7 +1,7 @@
-import Algorithms.BinarySearch;
 import Algorithms.BinaryTreeTraversal.BinaryTreeTraversalRunner;
 import Algorithms.GraphTraversal.GraphTraversalRunner;
 import Algorithms.ShortestPathAlgorithms.ShortestPathAlgorithmsRunner;
+import Algorithms.SortingAlgorithms.SortingAlgorithmsRunner;
 import DataStructures.Arrays.ArraysRunner;
 import DataStructures.BinarySearchTree.BinarySearchTreeRunner;
 import DataStructures.BinaryTree.BinaryTreeRunner;
@@ -9,9 +9,6 @@ import DataStructures.Graph.GraphRunner;
 import DataStructures.LinkedLists.LinkedListsRunner;
 import DataStructures.Queue.QueueRunner;
 import DataStructures.Stack.StackRunner;
-import Problems.ExpressionParsing.ExpressionParsingRunner;
-
-import java.util.Arrays;
 
 public class Master {
 
@@ -23,32 +20,26 @@ public class Master {
 
         // DataStructures.Arrays
         (new ArraysRunner()).run();
-
         System.out.println("--------------------------------------");
 
         // DataStructures.LinkedLists
         (new LinkedListsRunner()).run();
-
         System.out.println("--------------------------------------");
 
         // DataStructures.Stack
         (new StackRunner()).run();
-
         System.out.println("--------------------------------------");
 
         // DataStructures.Queue
         (new QueueRunner()).run();
-
         System.out.println("--------------------------------------");
 
         // DataStructures.BinaryTree
         (new BinaryTreeRunner()).run();
-
         System.out.println("--------------------------------------");
 
         // DataStructures.BinarySearchTree
         (new BinarySearchTreeRunner()).run();
-
         System.out.println("--------------------------------------");
 
         // DataStructures.Graph
@@ -58,9 +49,12 @@ public class Master {
         System.out.println("**********    Algorithms    **********");
         System.out.println("--------------------------------------------------------------------");
 
+        // SortingAlgorithms.SortingAlgorithms
+        (new SortingAlgorithmsRunner()).run();
+        System.out.println("--------------------------------------");
+
         // Algorithms.BinaryTreeTraversal
         (new BinaryTreeTraversalRunner()).run();
-
         System.out.println("--------------------------------------");
 
         // Algorithms.GraphTraversalRunner
@@ -75,11 +69,6 @@ public class Master {
 //        // Problems.ExpressionParsing
 //        (new ExpressionParsingRunner()).run();
 //
-//        System.out.println("--------------------------------------");
-//
-//        // do Binary Search
-//        System.out.print("Binary Search: ");
-//        int[] arr = {-2, 3, 4, 7, 8, 9, 11, 13, 25, 27, 33, 42, 49, 56, 59, 63, 78, 89, 99};
-//        (new BinarySearch()).doBinarySearch(arr, 33);
+
     }
 }
