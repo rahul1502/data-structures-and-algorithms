@@ -9,6 +9,7 @@ import DataStructures.Graph.GraphRunner;
 import DataStructures.LinkedLists.LinkedListsRunner;
 import DataStructures.Queue.QueueRunner;
 import DataStructures.Stack.StackRunner;
+import Problems.LinkedListsDetectCycle.LinkedListsDetectCycleRunner;
 
 public class Master {
 
@@ -63,12 +64,16 @@ public class Master {
 
         // Algorithms.ShortestPathAlgorithmsRunner
         (new ShortestPathAlgorithmsRunner()).run();
-        System.out.println("--------------------------------------");
+
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println("**********    Problems    **********");
+        System.out.println("--------------------------------------------------------------------");
 
 //
 //        // Problems.ExpressionParsing
 //        (new ExpressionParsingRunner()).run();
 //
-
+        // Problems.LinkedListsDetectCycleRunner
+        (new LinkedListsDetectCycleRunner()).run();
     }
 }
