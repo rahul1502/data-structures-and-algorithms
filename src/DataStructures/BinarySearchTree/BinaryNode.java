@@ -2,12 +2,11 @@ package DataStructures.BinarySearchTree;
 
 public class BinaryNode {
 
-    int data;
-    BinaryNode left;
-    BinaryNode right;
+    public int data;
+    public BinaryNode left;
+    public BinaryNode right;
 
     public BinaryNode(int data) {
         this.data = data;
     }
-
 }

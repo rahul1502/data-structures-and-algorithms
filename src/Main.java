@@ -1,14 +1,17 @@
-import Algorithms.BinaryTreeTraversal.BinaryTreeTraversalRunner;
 import Algorithms.GraphTraversal.GraphTraversalRunner;
 import Algorithms.ShortestPathAlgorithms.ShortestPathAlgorithmsRunner;
 import Algorithms.SortingAlgorithms.SortingAlgorithmsRunner;
+import DataStructures.AVLTree.AVLTreeRunner;
 import DataStructures.Arrays.ArraysRunner;
 import DataStructures.BinarySearchTree.BinarySearchTreeRunner;
 import DataStructures.BinaryTree.BinaryTreeRunner;
+import DataStructures.FenwickTree.FenwickTree;
+import DataStructures.FenwickTree.FenwickTreeRunner;
 import DataStructures.Graph.GraphRunner;
 import DataStructures.LinkedLists.LinkedListsRunner;
 import DataStructures.Queue.QueueRunner;
 import DataStructures.Stack.StackRunner;
+import DataStructures.Tries.TriesRunner;
 import Problems.LinkedListsDetectCycle.LinkedListsDetectCycleRunner;
 
 import java.util.Scanner;
@@ -27,6 +30,9 @@ public class Main {
         System.out.println("    (1.5) BinaryTree");
         System.out.println("    (1.6) BinarySearchTree");
         System.out.println("    (1.7) Graph");
+        System.out.println("    (1.8) FenwickTree");
+        System.out.println("    (1.9) AVLTree");
+        System.out.println("    (1.10) Tries");
         System.out.println("Algorithms");
         System.out.println("    (2.1) SortingAlgorithms");
         System.out.println("    (2.2) BinaryTreeTraversal");
@@ -77,22 +83,32 @@ public class Main {
                 // DataStructures.Graph
                 (new GraphRunner()).run();
                 break;
+            case "1.8":
+                System.out.println("Running DataStructures.FenwickTree");
+                // DataStructures.FenwickTree
+                (new FenwickTreeRunner()).run();
+                break;
+            case "1.9":
+                System.out.println("Running DataStructures.AVLTree");
+                // DataStructures.AVLTreeRunner
+                (new AVLTreeRunner()).run();
+                break;
+            case "1.10":
+                System.out.println("Running DataStructures.Tries");
+                // DataStructures.Tries
+                (new TriesRunner()).run();
+                break;
             case "2.1":
                 System.out.println("Running Algorithms.SortingAlgorithms");
                 // Algorithms.SortingAlgorithms
                 (new SortingAlgorithmsRunner()).run();
                 break;
             case "2.2":
-                System.out.println("Running Algorithms.BinaryTreeTraversal");
-                // Algorithms.BinaryTreeTraversal
-                (new BinaryTreeTraversalRunner()).run();
-                break;
-            case "2.3":
                 System.out.println("Running Algorithms.GraphTraversalRunner");
                 // Algorithms.GraphTraversalRunner
                 (new GraphTraversalRunner()).run();
                 break;
-            case "2.4":
+            case "2.3":
                 System.out.println("Running Algorithms.ShortestPathAlgorithmsRunner");
                 // Algorithms.ShortestPathAlgorithmsRunner
                 (new ShortestPathAlgorithmsRunner()).run();

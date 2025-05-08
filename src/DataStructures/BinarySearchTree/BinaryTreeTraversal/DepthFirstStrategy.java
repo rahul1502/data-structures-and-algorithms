@@ -1,10 +1,10 @@
-package Algorithms.BinaryTreeTraversal;
+package DataStructures.BinarySearchTree.BinaryTreeTraversal;
 
-import java.util.ArrayList;
+import DataStructures.BinarySearchTree.BinaryNode;
 
 public class DepthFirstStrategy {
 
-    public void preorderTraversal(BinaryNode root) {
+    public void preOrderTraversal(BinaryNode root) {
 
         if(root == null) {
             return;
@@ -12,21 +12,21 @@ public class DepthFirstStrategy {
 
         System.out.print(root.data + ", ");
 
-        preorderTraversal(root.left);
-        preorderTraversal(root.right);
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
     }
 
-    public void inorderTraversal(BinaryNode root) {
+    public void inOrderTraversal(BinaryNode root) {
 
         if(root == null) {
             return;
         }
 
-        inorderTraversal(root.left);
+        inOrderTraversal(root.left);
 
         System.out.print(root.data + ", ");
 
-        inorderTraversal(root.right);
+        inOrderTraversal(root.right);
 
     }
 

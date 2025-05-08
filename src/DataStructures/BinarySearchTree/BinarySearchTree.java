@@ -8,100 +8,152 @@ public class BinarySearchTree {
         this.root = root;
     }
 
-    public void insertNode(BinaryNode current, BinaryNode node) {
-        if(node.data > current.data) {
-            if(current.right == null) {
-                current.right = node;
+    public void insertNode(BinaryNode currentNode, BinaryNode node) {
+
+        if (node.data > currentNode.data) {
+            if (currentNode.right == null) {
+                currentNode.right = node;
                 return;
             }
-            insertNode(current.right, node);
+            insertNode(currentNode.right, node);
         }
         else {
-            if(current.left == null) {
-                current.left = node;
+            if (currentNode.left == null) {
+                currentNode.left = node;
                 return;
             }
-            insertNode(current.left, node);
+            insertNode(currentNode.left, node);
         }
     }
 
-    public void deleteNode(BinaryNode current, int value) {
+    public BinaryNode searchNode(BinaryNode currentNode, int value) {
 
-        BinaryNode nodeToBeDeleted = searchNode(current, value);
-        BinaryNode parentNode = findParent(current, nodeToBeDeleted.data);
-
-        if(nodeToBeDeleted.left == null && nodeToBeDeleted.right == null) {
-            // case 1 - leaf node
-            if (parentNode.right.data == nodeToBeDeleted.data){
-                parentNode.right = null;
-            }
-            else {
-                parentNode.left = null;
-            }
+        if (currentNode == null) {
+            return null;
         }
-        else if (nodeToBeDeleted.right != null && nodeToBeDeleted.left != null) {
-            // case 3 - node with two children
-            BinaryNode minOfRightSubTree = findMin(nodeToBeDeleted.right);
-            if (parentNode.right.data == nodeToBeDeleted.data){
-                parentNode.right.data = minOfRightSubTree.data;
-            }
-            else {
-                parentNode.left.data = minOfRightSubTree.data;
-            }
-            deleteNode(nodeToBeDeleted.right, minOfRightSubTree.data);
+
+        if (value == currentNode.data) {
+            return currentNode;
+        }
+        else if (value < currentNode.data) {
+            return searchNode(currentNode.left, value);
         }
         else {
-            // case 2 - node with exactly one child
-            if (parentNode.right != null && parentNode.right.data == nodeToBeDeleted.data){
-                parentNode.right = nodeToBeDeleted.right != null ? nodeToBeDeleted.right : nodeToBeDeleted.left;
-            }
-            else {
-                parentNode.left = nodeToBeDeleted.right != null ? nodeToBeDeleted.right : nodeToBeDeleted.left;
-            }
+            return searchNode(currentNode.right, value);
         }
     }
+    public void deleteNode(BinaryNode currentNode, int value) {
 
-    // find parent node of a node in BST
-    public BinaryNode findParent(BinaryNode current, int value) {
+        BinaryNode nodeToBeDeleted = searchNode(currentNode, value);
 
-        if((current.left != null && current.left.data == value) ||
-                (current.right != null && current.right.data == value)) {
-            return current;
+        if (nodeToBeDeleted.left == null && nodeToBeDeleted.right == null) {
+            nodeToBeDeleted = null;
         }
-
-        if(value > current.data) {
-            return findParent(current.right, value);
+        else if (nodeToBeDeleted.left != null && nodeToBeDeleted.right == null) {
+            nodeToBeDeleted = nodeToBeDeleted.left;
+            nodeToBeDeleted.left = null;
+        }
+        else if (nodeToBeDeleted.left == null && nodeToBeDeleted.right != null) {
+            nodeToBeDeleted = nodeToBeDeleted.right;
+            nodeToBeDeleted.right = null;
         }
         else {
-            return findParent(current.left, value);
+            BinaryNode maxValueNodeLeftSubTree = getMaxValueNode(nodeToBeDeleted.left);
+            BinaryNode minValueNodeRightSubTree = getMinValueNode(nodeToBeDeleted.right);
+
+            nodeToBeDeleted.data = maxValueNodeLeftSubTree.data;
+            maxValueNodeLeftSubTree = null;
         }
     }
 
-    public BinaryNode searchNode(BinaryNode current, int value) {
-        if(current.data == value) {
-            return current;
-        }
-
-        if(value > current.data) {
-            return searchNode(current.right, value);
+    public BinaryNode getMaxValueNode(BinaryNode currentNode) {
+        if (currentNode.right == null) {
+            return currentNode;
         }
         else {
-            return searchNode(current.left, value);
+            return getMaxValueNode(currentNode.right);
         }
     }
 
-    public BinaryNode findMin(BinaryNode current) {
-        if(current.left == null) {
-            return current;
+    public BinaryNode getMinValueNode(BinaryNode currentNode) {
+        if (currentNode.left == null) {
+            return currentNode;
         }
-        return findMin(current.left);
+        else {
+            return getMaxValueNode(currentNode.left);
+        }
     }
 
-    public BinaryNode findMax(BinaryNode current) {
-        if(current.right == null) {
-            return current;
+    public BinaryNode getLowestCommonAncestor(BinaryNode currentNode, BinaryNode a, BinaryNode b) {
+
+        boolean aLeft = false; boolean bLeft = false;
+        boolean aRight = false; boolean bRight = false;
+
+        // check if a or b belong to left subtree
+        if (currentNode.left != null) {
+            aLeft = (searchNode(currentNode.left, a.data) != null) ;
+            bLeft = (searchNode(currentNode.left, b.data) != null) ;
         }
-        return findMax(current.right);
+
+        // check if a or b belong to right subtree
+        if (currentNode.right != null) {
+            aRight = (searchNode(currentNode.right, a.data) != null) ;
+            bRight = (searchNode(currentNode.right, b.data) != null) ;
+        }
+
+        // if a and b are in different sub-trees  (left and right) then currentNode is LCA
+        if ((aLeft == true && bRight == true) || (aRight == true && bLeft == true)) {
+            return currentNode;
+        }
+        // if currentNode is a, and b it's a's child then return a
+        else if ((currentNode.data == a.data) && (bRight || bLeft)) {
+            return a;
+        }
+        // if currentNode is b, and a it's b's child then return b
+        else if ((currentNode.data == b.data) && (aRight || aLeft)) {
+            return b;
+        }
+        // if both a and b are in currentNode's left subtree
+        else if (aLeft == true && bLeft == true) {
+            return getLowestCommonAncestor(currentNode.left, a, b);
+        }
+        // if both a and b are in currentNode's right subtree
+        else if (aRight == true && bRight == true) {
+            return getLowestCommonAncestor(currentNode.right, a, b);
+        }
+        else {
+            return null;
+        }
+    }
+
+    public void invertBinaryTree(BinaryNode currentNode) {
+
+        BinaryNode temp;
+        if (currentNode.left != null || currentNode.right != null) {
+            temp = currentNode.left;
+            currentNode.left = currentNode.right;
+            currentNode.right = temp;
+        }
+
+        if (currentNode.left != null) {
+            invertBinaryTree(currentNode.left);
+        }
+
+        if (currentNode.right != null) {
+            invertBinaryTree(currentNode.right);
+        }
+    }
+
+    public int height(BinaryNode currentNode) {
+
+        if (currentNode == null) {
+            return -1;
+        }
+
+        int leftHeight = (currentNode.left != null) ? height(currentNode.left) : 0;
+        int rightHeight = (currentNode.right != null) ? height(currentNode.right) : 0;
+
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 
 }

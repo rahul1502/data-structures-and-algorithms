@@ -149,7 +149,7 @@ Algorithms.SortingAlgorithms:
     Quick Sort: Average Case O(nlog(n)), Worst Case O(n^2)
         [-52, -5, -4, 3, 5, 6, 7, 8, 12, 22, 23, 34, 45, 54, 56, 58, 76, 78, 83, 90]
 --------------------------------------
-Algorithms.BinaryTreeTraversal: 
+DataStructures.BinarySearchTree.BinaryTreeTraversal: 
     Binary Tree created...
     Breadth First Strategy: 
         Level Order traversal [F, D, K, B, E, H, L, A, C, G, J, I]
