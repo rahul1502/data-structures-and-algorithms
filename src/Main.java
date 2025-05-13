@@ -1,4 +1,7 @@
+import Algorithms.Graph.BellmanFordAlgorithm.BellmanFordAlgorithmRunner;
 import Algorithms.Graph.DijkstraShortestPathAlgorithm.DijkstraShortestPathAlgorithmRunner;
+import Algorithms.Graph.FloydWarshallAlgorithm.FloydWarshallAlgorithm;
+import Algorithms.Graph.FloydWarshallAlgorithm.FloydWarshallAlgorithmRunner;
 import Algorithms.Graph.Traversal.BFS.BFSTraversalRunner;
 import Algorithms.Graph.Traversal.DFS.DFSTraversalRunner;
 import Algorithms.GraphTraversal.GraphTraversalRunner;
@@ -41,7 +44,10 @@ public class Main {
         System.out.println("        (2.1) Traversal");
         System.out.println("            (2.1.1) Depth First Search (DFS)");
         System.out.println("            (2.1.2) Depth First Search (BFS)");
-        System.out.println("        (2.2) Dijkstra's Shortest Path Algorithm");
+        System.out.println("        (2.2) Shortest Path Algorithms");
+        System.out.println("            (2.2.1) Dijkstra's Shortest Path Algorithm");
+        System.out.println("            (2.2.2) Bellman Ford Algorithm");
+        System.out.println("            (2.2.3) Floyd Warshall Algorithm");
 
 
         System.out.println("    (2.1) SortingAlgorithms");
@@ -117,10 +123,20 @@ public class Main {
                 // Algorithms.SortingAlgorithms
                 (new BFSTraversalRunner()).run();
                 break;
-            case "2.2":
+            case "2.2.1":
                 System.out.println("Running Algorithms.Graph.DijkstraShortestPathAlgorithm");
                 // Algorithms.Graph.DijkstraShortestPathAlgorithm
                 (new DijkstraShortestPathAlgorithmRunner()).run();
+                break;
+            case "2.2.2":
+                System.out.println("Running Algorithms.Graph.BellmanFordAlgorithm");
+                // Algorithms.Graph.BellmanFordAlgorithm
+                (new BellmanFordAlgorithmRunner()).run();
+                break;
+            case "2.2.3":
+                System.out.println("Running Algorithms.Graph.FloydWarshallAlgorithm");
+                // Algorithms.Graph.FloydWarshallAlgorithm
+                (new FloydWarshallAlgorithmRunner()).run();
                 break;
             // case "2.1":
             //     System.out.println("Running Algorithms.SortingAlgorithms");
@@ -132,7 +148,11 @@ public class Main {
             //     // Algorithms.GraphTraversalRunner
             //     (new GraphTraversalRunner()).run();
             //     break;
-            
+            case "3.1":
+                System.out.println("Running Problems.ShortestPathAlgorithmsRunner");
+                // Problems.ShortestPathAlgorithmsRunner
+                (new ShortestPathAlgorithmsRunner()).run();
+                break;
             
             // case "3.1":
             //     System.out.println("Running Problems.LinkedListsDetectCycleRunner");
