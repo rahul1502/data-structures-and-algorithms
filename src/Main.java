@@ -1,3 +1,6 @@
+import Algorithms.Graph.DijkstraShortestPathAlgorithm.DijkstraShortestPathAlgorithmRunner;
+import Algorithms.Graph.Traversal.BFS.BFSTraversalRunner;
+import Algorithms.Graph.Traversal.DFS.DFSTraversalRunner;
 import Algorithms.GraphTraversal.GraphTraversalRunner;
 import Algorithms.ShortestPathAlgorithms.ShortestPathAlgorithmsRunner;
 import Algorithms.SortingAlgorithms.SortingAlgorithmsRunner;
@@ -34,10 +37,16 @@ public class Main {
         System.out.println("    (1.9) AVLTree");
         System.out.println("    (1.10) Tries");
         System.out.println("Algorithms");
+        System.out.println("    (2) Graph");
+        System.out.println("        (2.1) Traversal");
+        System.out.println("            (2.1.1) Depth First Search (DFS)");
+        System.out.println("            (2.1.2) Depth First Search (BFS)");
+        System.out.println("        (2.2) Dijkstra's Shortest Path Algorithm");
+
+
         System.out.println("    (2.1) SortingAlgorithms");
-        System.out.println("    (2.2) BinaryTreeTraversal");
-        System.out.println("    (2.3) GraphTraversalRunner");
-        System.out.println("    (2.4) ShortestPathAlgorithmsRunner");
+        System.out.println("    (2.2) GraphTraversalRunner");
+        System.out.println("    (2.3) ShortestPathAlgorithmsRunner");
         System.out.println("Problems");
         System.out.println("    (3.1) LinkedListsDetectCycleRunner");
         System.out.println();
@@ -98,26 +107,38 @@ public class Main {
                 // DataStructures.Tries
                 (new TriesRunner()).run();
                 break;
-            case "2.1":
-                System.out.println("Running Algorithms.SortingAlgorithms");
+            case "2.1.1":
+                System.out.println("Running Algorithms.Graph.Traversal.Depth First Search (DFS)");
                 // Algorithms.SortingAlgorithms
-                (new SortingAlgorithmsRunner()).run();
+                (new DFSTraversalRunner()).run();
+                break;
+            case "2.1.2":
+                System.out.println("Running Algorithms.Graph.Traversal.Breadth First Search (BFS)");
+                // Algorithms.SortingAlgorithms
+                (new BFSTraversalRunner()).run();
                 break;
             case "2.2":
-                System.out.println("Running Algorithms.GraphTraversalRunner");
-                // Algorithms.GraphTraversalRunner
-                (new GraphTraversalRunner()).run();
+                System.out.println("Running Algorithms.Graph.DijkstraShortestPathAlgorithm");
+                // Algorithms.Graph.DijkstraShortestPathAlgorithm
+                (new DijkstraShortestPathAlgorithmRunner()).run();
                 break;
-            case "2.3":
-                System.out.println("Running Algorithms.ShortestPathAlgorithmsRunner");
-                // Algorithms.ShortestPathAlgorithmsRunner
-                (new ShortestPathAlgorithmsRunner()).run();
-                break;
-            case "3.1":
-                System.out.println("Running Problems.LinkedListsDetectCycleRunner");
-                // Problems.LinkedListsDetectCycleRunner
-                (new LinkedListsDetectCycleRunner()).run();
-                break;
+            // case "2.1":
+            //     System.out.println("Running Algorithms.SortingAlgorithms");
+            //     // Algorithms.SortingAlgorithms
+            //     (new SortingAlgorithmsRunner()).run();
+            //     break;
+            // case "2.2":
+            //     System.out.println("Running Algorithms.GraphTraversalRunner");
+            //     // Algorithms.GraphTraversalRunner
+            //     (new GraphTraversalRunner()).run();
+            //     break;
+            
+            
+            // case "3.1":
+            //     System.out.println("Running Problems.LinkedListsDetectCycleRunner");
+            //     // Problems.LinkedListsDetectCycleRunner
+            //     (new LinkedListsDetectCycleRunner()).run();
+            //     break;
             default:
                 System.out.println("Unknown input");
         }
