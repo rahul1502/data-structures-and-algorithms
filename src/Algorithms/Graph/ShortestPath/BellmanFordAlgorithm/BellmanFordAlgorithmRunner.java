@@ -1,4 +1,4 @@
-package Algorithms.Graph.BellmanFordAlgorithm;
+package Algorithms.Graph.ShortestPath.BellmanFordAlgorithm;
 
 import java.util.ArrayList;
 import java.util.HashMap;

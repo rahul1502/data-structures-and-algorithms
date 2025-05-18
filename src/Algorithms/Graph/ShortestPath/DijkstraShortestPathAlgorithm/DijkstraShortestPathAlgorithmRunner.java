@@ -1,4 +1,4 @@
-package Algorithms.Graph.DijkstraShortestPathAlgorithm;
+package Algorithms.Graph.ShortestPath.DijkstraShortestPathAlgorithm;
 
 import java.util.ArrayList;
 import java.util.HashMap;

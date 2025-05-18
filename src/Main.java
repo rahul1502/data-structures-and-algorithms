@@ -1,24 +1,22 @@
-import Algorithms.Graph.BellmanFordAlgorithm.BellmanFordAlgorithmRunner;
-import Algorithms.Graph.DijkstraShortestPathAlgorithm.DijkstraShortestPathAlgorithmRunner;
-import Algorithms.Graph.FloydWarshallAlgorithm.FloydWarshallAlgorithm;
-import Algorithms.Graph.FloydWarshallAlgorithm.FloydWarshallAlgorithmRunner;
+import Algorithms.Graph.ShortestPath.BellmanFordAlgorithm.BellmanFordAlgorithmRunner;
+import Algorithms.Graph.ShortestPath.DijkstraShortestPathAlgorithm.DijkstraShortestPathAlgorithmRunner;
+import Algorithms.Graph.ShortestPath.FloydWarshallAlgorithm.FloydWarshallAlgorithmRunner;
+import Algorithms.Graph.MinimumSpanningTree.KruskalsAlgorithm.KruskalsAlgorithmRunner;
+import Algorithms.Graph.MinimumSpanningTree.PrimsAlgorithm.PrimsAlgorithmRunner;
 import Algorithms.Graph.Traversal.BFS.BFSTraversalRunner;
 import Algorithms.Graph.Traversal.DFS.DFSTraversalRunner;
-import Algorithms.GraphTraversal.GraphTraversalRunner;
 import Algorithms.ShortestPathAlgorithms.ShortestPathAlgorithmsRunner;
 import Algorithms.SortingAlgorithms.SortingAlgorithmsRunner;
 import DataStructures.AVLTree.AVLTreeRunner;
 import DataStructures.Arrays.ArraysRunner;
 import DataStructures.BinarySearchTree.BinarySearchTreeRunner;
 import DataStructures.BinaryTree.BinaryTreeRunner;
-import DataStructures.FenwickTree.FenwickTree;
 import DataStructures.FenwickTree.FenwickTreeRunner;
 import DataStructures.Graph.GraphRunner;
 import DataStructures.LinkedLists.LinkedListsRunner;
 import DataStructures.Queue.QueueRunner;
 import DataStructures.Stack.StackRunner;
 import DataStructures.Tries.TriesRunner;
-import Problems.LinkedListsDetectCycle.LinkedListsDetectCycleRunner;
 
 import java.util.Scanner;
 
@@ -48,7 +46,9 @@ public class Main {
         System.out.println("            (2.2.1) Dijkstra's Shortest Path Algorithm");
         System.out.println("            (2.2.2) Bellman Ford Algorithm");
         System.out.println("            (2.2.3) Floyd Warshall Algorithm");
-
+        System.out.println("        (2.3) Minimum Spanning Tree (MST) Algorithms");
+        System.out.println("            (2.3.1) Prim's Algorithm");
+        System.out.println("            (2.3.2) Kruskal's Algorithm");
 
         System.out.println("    (2.1) SortingAlgorithms");
         System.out.println("    (2.2) GraphTraversalRunner");
@@ -124,19 +124,29 @@ public class Main {
                 (new BFSTraversalRunner()).run();
                 break;
             case "2.2.1":
-                System.out.println("Running Algorithms.Graph.DijkstraShortestPathAlgorithm");
-                // Algorithms.Graph.DijkstraShortestPathAlgorithm
+                System.out.println("Running Algorithms.Graph.ShortestPath.DijkstraShortestPathAlgorithm");
+                // Algorithms.Graph.ShortestPath.DijkstraShortestPathAlgorithm
                 (new DijkstraShortestPathAlgorithmRunner()).run();
                 break;
             case "2.2.2":
-                System.out.println("Running Algorithms.Graph.BellmanFordAlgorithm");
-                // Algorithms.Graph.BellmanFordAlgorithm
+                System.out.println("Running Algorithms.Graph.ShortestPath.BellmanFordAlgorithm");
+                // Algorithms.Graph.ShortestPath.BellmanFordAlgorithm
                 (new BellmanFordAlgorithmRunner()).run();
                 break;
             case "2.2.3":
-                System.out.println("Running Algorithms.Graph.FloydWarshallAlgorithm");
-                // Algorithms.Graph.FloydWarshallAlgorithm
+                System.out.println("Running Algorithms.Graph.ShortestPath.FloydWarshallAlgorithm");
+                // Algorithms.Graph.ShortestPath.FloydWarshallAlgorithm
                 (new FloydWarshallAlgorithmRunner()).run();
+                break;
+            case "2.3.1":
+                System.out.println("Running Algorithms.Graph.MinimumSpanningTree.PrimsAlgorithm");
+                // Algorithms.Graph.MinimumSpanningTree.PrimsAlgorithm
+                (new PrimsAlgorithmRunner()).run();
+                break;
+            case "2.3.2":
+                System.out.println("Running Algorithms.Graph.MinimumSpanningTree.KruskalsAlgorithm");
+                // Algorithms.Graph.MinimumSpanningTree.KruskalsAlgorithm
+                (new KruskalsAlgorithmRunner()).run();
                 break;
             // case "2.1":
             //     System.out.println("Running Algorithms.SortingAlgorithms");

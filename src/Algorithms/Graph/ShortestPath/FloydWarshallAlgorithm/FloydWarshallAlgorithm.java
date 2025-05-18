@@ -1,12 +1,11 @@
-package Algorithms.Graph.FloydWarshallAlgorithm;
+package Algorithms.Graph.ShortestPath.FloydWarshallAlgorithm;
 
 public class FloydWarshallAlgorithm {
 
     public void floydWarshallAlgorithm(int[][] graph) {
         
         int V = graph.length; // number of graph nodes
-        
-        
+
         int[][] dist = new int[V][V];
 
         // Initialize the solution matrix
@@ -20,7 +19,7 @@ public class FloydWarshallAlgorithm {
                 for (int j = 0; j < V; j++) {
                     if (dist[i][k] + dist[k][j] < dist[i][j])
                         dist[i][j] = dist[i][k] + dist[k][j];
-                }
+                }f
             }
         }
 

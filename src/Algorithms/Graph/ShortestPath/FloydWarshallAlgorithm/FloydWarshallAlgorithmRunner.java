@@ -1,4 +1,4 @@
-package Algorithms.Graph.FloydWarshallAlgorithm;
+package Algorithms.Graph.ShortestPath.FloydWarshallAlgorithm;
 
 public class FloydWarshallAlgorithmRunner {
 
