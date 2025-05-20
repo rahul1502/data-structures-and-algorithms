@@ -1,6 +1,10 @@
 import Algorithms.Graph.ShortestPath.BellmanFordAlgorithm.BellmanFordAlgorithmRunner;
 import Algorithms.Graph.ShortestPath.DijkstraShortestPathAlgorithm.DijkstraShortestPathAlgorithmRunner;
 import Algorithms.Graph.ShortestPath.FloydWarshallAlgorithm.FloydWarshallAlgorithmRunner;
+import Algorithms.Graph.TopologicalSort.DFS.TopologicalSort;
+import Algorithms.Graph.TopologicalSort.DFS.TopologicalSortRunner;
+import Algorithms.Graph.TopologicalSort.KahnsAlgorithm.KahnsAlgorithm;
+import Algorithms.Graph.TopologicalSort.KahnsAlgorithm.KahnsAlgorithmRunner;
 import Algorithms.Graph.MinimumSpanningTree.KruskalsAlgorithm.KruskalsAlgorithmRunner;
 import Algorithms.Graph.MinimumSpanningTree.PrimsAlgorithm.PrimsAlgorithmRunner;
 import Algorithms.Graph.Traversal.BFS.BFSTraversalRunner;
@@ -49,6 +53,9 @@ public class Main {
         System.out.println("        (2.3) Minimum Spanning Tree (MST) Algorithms");
         System.out.println("            (2.3.1) Prim's Algorithm");
         System.out.println("            (2.3.2) Kruskal's Algorithm");
+        System.out.println("        (2.4) Topological Sort of DAG");
+        System.out.println("            (2.4.1) Topological Sort - DFS");
+        System.out.println("            (2.4.2) Topological Sort - Kahn's Algorithm");
 
         System.out.println("    (2.1) SortingAlgorithms");
         System.out.println("    (2.2) GraphTraversalRunner");
@@ -148,26 +155,20 @@ public class Main {
                 // Algorithms.Graph.MinimumSpanningTree.KruskalsAlgorithm
                 (new KruskalsAlgorithmRunner()).run();
                 break;
+            case "2.4.1":
+                System.out.println("Running Algorithms.Graph.TopologicalSort.DFS.TopologicalSort");
+                // Algorithms.Graph.TopologicalSort.DFS.TopologicalSort
+                (new TopologicalSortRunner()).run();
+                break;
+            case "2.4.2":
+                System.out.println("Running Algorithms.Graph.TopologicalSort.DFS.TopologicalSort");
+                // Algorithms.Graph.TopologicalSort
+                (new KahnsAlgorithmRunner()).run();
+                break;
             // case "2.1":
             //     System.out.println("Running Algorithms.SortingAlgorithms");
             //     // Algorithms.SortingAlgorithms
             //     (new SortingAlgorithmsRunner()).run();
-            //     break;
-            // case "2.2":
-            //     System.out.println("Running Algorithms.GraphTraversalRunner");
-            //     // Algorithms.GraphTraversalRunner
-            //     (new GraphTraversalRunner()).run();
-            //     break;
-            case "3.1":
-                System.out.println("Running Problems.ShortestPathAlgorithmsRunner");
-                // Problems.ShortestPathAlgorithmsRunner
-                (new ShortestPathAlgorithmsRunner()).run();
-                break;
-            
-            // case "3.1":
-            //     System.out.println("Running Problems.LinkedListsDetectCycleRunner");
-            //     // Problems.LinkedListsDetectCycleRunner
-            //     (new LinkedListsDetectCycleRunner()).run();
             //     break;
             default:
                 System.out.println("Unknown input");
