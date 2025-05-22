@@ -1,15 +1,12 @@
+import Algorithms.Graph.MinimumSpanningTree.KruskalsAlgorithm.KruskalsAlgorithmRunner;
+import Algorithms.Graph.MinimumSpanningTree.PrimsAlgorithm.PrimsAlgorithmRunner;
 import Algorithms.Graph.ShortestPath.BellmanFordAlgorithm.BellmanFordAlgorithmRunner;
 import Algorithms.Graph.ShortestPath.DijkstraShortestPathAlgorithm.DijkstraShortestPathAlgorithmRunner;
 import Algorithms.Graph.ShortestPath.FloydWarshallAlgorithm.FloydWarshallAlgorithmRunner;
-import Algorithms.Graph.TopologicalSort.DFS.TopologicalSort;
 import Algorithms.Graph.TopologicalSort.DFS.TopologicalSortRunner;
-import Algorithms.Graph.TopologicalSort.KahnsAlgorithm.KahnsAlgorithm;
 import Algorithms.Graph.TopologicalSort.KahnsAlgorithm.KahnsAlgorithmRunner;
-import Algorithms.Graph.MinimumSpanningTree.KruskalsAlgorithm.KruskalsAlgorithmRunner;
-import Algorithms.Graph.MinimumSpanningTree.PrimsAlgorithm.PrimsAlgorithmRunner;
 import Algorithms.Graph.Traversal.BFS.BFSTraversalRunner;
 import Algorithms.Graph.Traversal.DFS.DFSTraversalRunner;
-import Algorithms.ShortestPathAlgorithms.ShortestPathAlgorithmsRunner;
 import Algorithms.SortingAlgorithms.SortingAlgorithmsRunner;
 import DataStructures.AVLTree.AVLTreeRunner;
 import DataStructures.Arrays.ArraysRunner;
@@ -57,7 +54,12 @@ public class Main {
         System.out.println("            (2.4.1) Topological Sort - DFS");
         System.out.println("            (2.4.2) Topological Sort - Kahn's Algorithm");
 
-        System.out.println("    (2.1) SortingAlgorithms");
+        System.out.println("    (3) SortingAlgorithms");
+        System.out.println("        (3.1) Bubble Sort");
+        System.out.println("        (3.2) Insertion Sort");
+        System.out.println("        (3.3) Merge Sort");
+        System.out.println("        (3.4) Selection Sort");
+        System.out.println("        (3.5) Quick Sort");
         System.out.println("    (2.2) GraphTraversalRunner");
         System.out.println("    (2.3) ShortestPathAlgorithmsRunner");
         System.out.println("Problems");
@@ -165,11 +167,31 @@ public class Main {
                 // Algorithms.Graph.TopologicalSort
                 (new KahnsAlgorithmRunner()).run();
                 break;
-            // case "2.1":
-            //     System.out.println("Running Algorithms.SortingAlgorithms");
-            //     // Algorithms.SortingAlgorithms
-            //     (new SortingAlgorithmsRunner()).run();
-            //     break;
+            case "3.1":
+                System.out.println("Running Algorithms.SortingAlgorithms.BubbleSort");
+                // Algorithms.SortingAlgorithms.BubbleSort
+                (new SortingAlgorithmsRunner()).runBubbleSort();
+                break;
+            case "3.2":
+                System.out.println("Running Algorithms.SortingAlgorithms.InsertionSort");
+                // Algorithms.SortingAlgorithms.InsertionSort
+                (new SortingAlgorithmsRunner()).runInsertionSort();
+                break;
+            case "3.3":
+                System.out.println("Running Algorithms.SortingAlgorithms.MergeSort");
+                // Algorithms.SortingAlgorithms.MergeSort
+                (new SortingAlgorithmsRunner()).runMergeSort();
+                break;
+            case "3.4":
+                System.out.println("Running Algorithms.SortingAlgorithms.SelectionSort");
+                // Algorithms.SortingAlgorithms.SelectionSort
+                (new SortingAlgorithmsRunner()).runSelectionSort();
+                break;
+            case "3.5":
+                System.out.println("Running Algorithms.SortingAlgorithms.QuickSort");
+                // Algorithms.SortingAlgorithms.QuickSort
+                (new SortingAlgorithmsRunner()).runQuickSort();
+                break;
             default:
                 System.out.println("Unknown input");
         }

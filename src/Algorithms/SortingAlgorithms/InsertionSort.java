@@ -6,31 +6,22 @@ public class InsertionSort {
 
     public int[] sort(int[] array) {
 
-        int hole;
-        int holeElement;
         int n = array.length;
 
         for(int i=1; i<n; i++) {
 
-            hole = i;
-            holeElement = array[i];
+            int j = i;
+            while (j > 0 && array[j-1] > array[j]) {
+                int temp = array[j-1];
+                array[j-1] = array[j];
+                array[j] = temp;
 
-            for (int j=hole-1; j>=0; j--) {
-                if(array[j] > holeElement) {
-                    array[j+1] = array[j];
+                System.out.println("          Swap " + array[j-1] + " <-> " + array[j]);
 
-                    if(j==0) {
-                        array[j] = holeElement;
-                    }
-                }
-                else {
-                    array[j+1] = holeElement;
-                    break;
-                }
-
+                j = j-1;
             }
-
-            System.out.println("        Hole: " + holeElement + " Array: " + Arrays.toString(array));
+            
+            System.out.println("        Array: " + Arrays.toString(array));
 
         }
 
